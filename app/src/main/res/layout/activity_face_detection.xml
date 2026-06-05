@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Full-screen camera preview -->
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Face count — top left -->
+    <TextView
+        android:id="@+id/faceCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_margin="16dp"
+        android:background="#80000000"
+        android:padding="8dp"
+        android:text="Faces detected: 0"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Camera label — top center -->
+    <TextView
+        android:id="@+id/cameraLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="#80000000"
+        android:padding="6dp"
+        android:text="Camera: Back"
+        android:textColor="#FFFF00"
+        android:textSize="14sp" />
+
+    <!-- Back button — top right -->
+    <Button
+        android:id="@+id/btnBack"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:text="← Back"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
+
+    <!-- Flip camera button — bottom center -->
+    <Button
+        android:id="@+id/btnFlip"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="24dp"
+        android:text="⇄  Flip Camera"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF" />
+
+</FrameLayout>
